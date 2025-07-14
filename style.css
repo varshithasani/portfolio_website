@@ -399,4 +399,12 @@ ul {
   color: #50bab3;            /* Matching the heading color */
   text-align: center;
 }
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem; /* or increase to 1.5rem for better visibility */
+  color: #66fcf1;
+  text-align: center;
+  margin-top: 1rem;
+}
 
