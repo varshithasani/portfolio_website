@@ -301,11 +301,31 @@ ul {
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 40px;
-  padding: 40px 0;         /* Added spacing to avoid clipping */
-  overflow: visible;       /* Fix glow/shadow getting cut */
-  position: relative;      /* Enables accurate shadow rendering */
+  padding: 40px 0;
+  overflow: visible;
+  position: relative;
   z-index: 1;
 }
+
+/* For desktop view – allow 4 in a row */
+.project-card.big {
+  width: 23%; /* Slightly less than 25% to accommodate gap */
+  min-width: 280px;
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (max-width: 1200px) {
+  .project-card.big {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card.big {
+    width: 100%;
+  }
+}
+
 
 .project-card {
   background: rgba(255, 255, 255, 0.08);
@@ -348,5 +368,35 @@ ul {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #e0e0e0;
+}
+.project-heading {
+  font-family: Georgia, serif;
+  font-size: 2.8rem;
+  color: #66fcf1;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project-subheading {
+  font-family: Georgia, serif;
+  font-size: 3.6rem; /* Increased from 3.4rem */
+  font-weight: bold;
+  color: #66fcf1; /* Same as .project-heading */
+  text-align: center;
+}
+.project-heading {
+  font-family: Georgia, serif;
+  font-size: 4rem;           /* Increased size */
+  color: #66fcf1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.project-subheading {
+  font-family: Georgia, serif;
+  font-size: 3rem;           /* Slightly smaller than heading */
+  font-weight: bold;
+  color: #50bab3;            /* Matching the heading color */
+  text-align: center;
 }
 
